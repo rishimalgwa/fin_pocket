@@ -1,10 +1,12 @@
 import 'package:fin_pocket/comman/styles.dart';
 import 'package:fin_pocket/comman/theme.dart';
 import 'package:fin_pocket/features/dashboard/presentation/pages/all_assets.dart';
+import 'package:fin_pocket/features/dashboard/presentation/pages/assest_search.dart';
 import 'package:fin_pocket/features/dashboard/presentation/pages/home_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/route_manager.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({Key? key}) : super(key: key);
@@ -138,10 +140,14 @@ class AddAssetBottomSheet extends StatelessWidget {
                           SizedBox(
                             width: 100,
                             child: TextFormField(
-                                // controller: _messagingController,
-                                keyboardType: TextInputType.name,
-                                decoration: textfieldDecoration.copyWith(
-                                    hintText: 'Name')),
+                              // controller: _messagingController,
+                              keyboardType: TextInputType.name,
+                              decoration: textfieldDecoration.copyWith(
+                                  hintText: 'Name'),
+                              onTap: () {
+                                Get.to(() => const AssetSearchPage());
+                              },
+                            ),
                           ),
                         ],
                       ),

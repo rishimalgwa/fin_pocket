@@ -44,6 +44,7 @@ class _HomePageState extends State<HomePage> {
                     children: [
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
                             'Portfolio value',
