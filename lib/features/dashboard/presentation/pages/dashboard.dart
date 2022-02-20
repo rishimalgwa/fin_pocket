@@ -97,11 +97,17 @@ class _DashboardState extends State<Dashboard> {
   }
 }
 
-class AddAssetBottomSheet extends StatelessWidget {
+class AddAssetBottomSheet extends StatefulWidget {
   const AddAssetBottomSheet({
     Key? key,
   }) : super(key: key);
 
+  @override
+  State<AddAssetBottomSheet> createState() => _AddAssetBottomSheetState();
+}
+
+class _AddAssetBottomSheetState extends State<AddAssetBottomSheet> {
+  TextEditingController assetNameController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -140,12 +146,16 @@ class AddAssetBottomSheet extends StatelessWidget {
                           SizedBox(
                             width: 100,
                             child: TextFormField(
-                              // controller: _messagingController,
+                              controller: assetNameController,
                               keyboardType: TextInputType.name,
                               decoration: textfieldDecoration.copyWith(
                                   hintText: 'Name'),
-                              onTap: () {
-                                Get.to(() => const AssetSearchPage());
+                              onTap: () async {
+                                Get.to(const AssetSearchPage())!.then((res) {
+                                  setState(() {
+                                    assetNameController.text = res['name'];
+                                  });
+                                });
                               },
                             ),
                           ),

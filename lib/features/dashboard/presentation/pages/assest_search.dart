@@ -1,6 +1,7 @@
 import 'package:fin_pocket/comman/constants.dart';
 import 'package:fin_pocket/comman/styles.dart';
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
 
 class AssetSearchPage extends StatefulWidget {
   const AssetSearchPage({Key? key}) : super(key: key);
@@ -10,6 +11,7 @@ class AssetSearchPage extends StatefulWidget {
 }
 
 class _AssetSearchPageState extends State<AssetSearchPage> {
+  TextEditingController searchController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,6 +27,10 @@ class _AssetSearchPageState extends State<AssetSearchPage> {
         child: Column(
           children: [
             TextFormField(
+              controller: searchController,
+              onChanged: (v) {
+                setState(() {});
+              },
               decoration: textfieldDecoration.copyWith(
                   hintText: 'Search',
                   suffixIcon: const Icon(
@@ -34,11 +40,40 @@ class _AssetSearchPageState extends State<AssetSearchPage> {
             ),
             Expanded(
               child: ListView.builder(
-                  itemCount: gg.length,
+                  itemCount: bseCryptoSymbolMap.length,
                   itemBuilder: (context, index) {
-                    return ListTile(
-                      title: Text(gg.toList()[index]),
-                    );
+                    String name = bseCryptoSymbolMap.keys.toList()[index];
+                    String symbol = bseCryptoSymbolMap.values.toList()[index];
+                    if (searchController.text.isEmpty) {
+                      return GestureDetector(
+                        onTap: () =>
+                            Get.back(result: {'name': name, 'symbol': symbol}),
+                        child: Card(
+                          child: ListTile(
+                            title: Text(name),
+                            subtitle: Text(symbol),
+                          ),
+                        ),
+                      );
+                    } else if (name
+                            .toLowerCase()
+                            .contains(searchController.text.toLowerCase()) ||
+                        symbol
+                            .toLowerCase()
+                            .contains(searchController.text.toLowerCase())) {
+                      return GestureDetector(
+                        onTap: () =>
+                            Get.back(result: bseCryptoSymbolMap[index]),
+                        child: Card(
+                          child: ListTile(
+                            title: Text(name),
+                            subtitle: Text(symbol),
+                          ),
+                        ),
+                      );
+                    } else {
+                      return const SizedBox();
+                    }
                   }),
             )
           ],
