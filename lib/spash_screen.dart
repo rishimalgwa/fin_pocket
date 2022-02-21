@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:fin_pocket/comman/theme.dart';
+import 'package:fin_pocket/features/auth/presentation/pages/email_signup_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 
@@ -17,7 +18,8 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 2), () => Get.to(() => const Dashboard()));
+    Timer(const Duration(seconds: 2),
+        () => Get.to(() => const EmailSignupPage()));
   }
 
   @override
