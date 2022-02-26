@@ -1,5 +1,5 @@
-import 'package:fin_pocket/comman/styles.dart';
-import 'package:fin_pocket/comman/theme.dart';
+import 'package:fin_pocket/comman/theme/styles.dart';
+import 'package:fin_pocket/comman/theme/theme.dart';
 import 'package:flutter/material.dart';
 
 class PrimaryButton extends StatelessWidget {

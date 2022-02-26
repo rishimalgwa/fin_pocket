@@ -1,5 +1,5 @@
-import 'package:fin_pocket/comman/styles.dart';
-import 'package:fin_pocket/comman/theme.dart';
+import 'package:fin_pocket/comman/theme/styles.dart';
+import 'package:fin_pocket/comman/theme/theme.dart';
 import 'package:fin_pocket/features/dashboard/presentation/pages/all_assets.dart';
 import 'package:fin_pocket/features/dashboard/presentation/pages/assest_search.dart';
 import 'package:fin_pocket/features/dashboard/presentation/pages/home_page.dart';

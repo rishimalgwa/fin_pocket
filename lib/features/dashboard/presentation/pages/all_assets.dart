@@ -1,4 +1,4 @@
-import 'package:fin_pocket/comman/styles.dart';
+import 'package:fin_pocket/comman/theme/styles.dart';
 import 'package:fin_pocket/features/dashboard/presentation/widgets/card.dart';
 import 'package:flutter/material.dart';
 

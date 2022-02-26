@@ -1,6 +1,6 @@
-import 'package:fin_pocket/comman/constants.dart';
-import 'package:fin_pocket/comman/styles.dart';
-import 'package:fin_pocket/comman/theme.dart';
+import 'package:fin_pocket/comman/constants/constants.dart';
+import 'package:fin_pocket/comman/theme/styles.dart';
+import 'package:fin_pocket/comman/theme/theme.dart';
 import 'package:flutter/material.dart';
 
 class CustomListTile extends StatelessWidget {

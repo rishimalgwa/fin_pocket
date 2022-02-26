@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:fin_pocket/comman/theme.dart';
+import 'package:fin_pocket/comman/theme/theme.dart';
 import 'package:fin_pocket/features/auth/presentation/pages/email_signup_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';

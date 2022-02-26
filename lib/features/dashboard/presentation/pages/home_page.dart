@@ -1,6 +1,6 @@
-import 'package:fin_pocket/comman/constants.dart';
-import 'package:fin_pocket/comman/styles.dart';
-import 'package:fin_pocket/comman/theme.dart';
+import 'package:fin_pocket/comman/constants/assets_path.dart';
+import 'package:fin_pocket/comman/theme/styles.dart';
+import 'package:fin_pocket/comman/theme/theme.dart';
 import 'package:fin_pocket/features/dashboard/presentation/widgets/card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';

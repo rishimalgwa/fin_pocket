@@ -1,5 +1,5 @@
-import 'package:fin_pocket/comman/constants.dart';
-import 'package:fin_pocket/comman/styles.dart';
+import 'package:fin_pocket/comman/constants/maps.dart';
+import 'package:fin_pocket/comman/theme/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 

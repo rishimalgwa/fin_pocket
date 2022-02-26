@@ -1,4 +1,4 @@
-import 'package:fin_pocket/comman/theme.dart';
+import 'package:fin_pocket/comman/theme/theme.dart';
 import 'package:fin_pocket/spash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
